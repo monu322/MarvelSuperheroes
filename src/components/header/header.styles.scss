@@ -1,0 +1,13 @@
+.header
+{
+    padding: 10px 0px;
+}
+
+.navbar-brand
+{
+    cursor: pointer;
+    &:hover
+    {
+        text-decoration: underline;
+    }
+}

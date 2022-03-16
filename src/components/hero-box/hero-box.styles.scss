@@ -1,0 +1,207 @@
+.listing-box
+{
+    margin-top: 20px !important;
+    padding:32px 40px 32px 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 7px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    margin-bottom: 24px;
+    border-left: 5px solid #fff;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &:hover
+    {
+        border-left: 5px solid #5CA5A5;
+        box-shadow: 0px 0px 20px 15px rgba(13, 113, 130, 0.15);
+    }
+}
+
+.thumpnail
+{
+    width:88px;
+    height: 88px;
+    border-radius: 50%;
+    background-size: 88px;
+}
+
+//custom grid widths to match design
+.thumpnail-col
+{
+    max-width: 11% !important;
+}
+
+.info-col-parent
+{
+    max-width: 89% !important;
+}
+
+
+.job-tags-col
+{
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 0px !important;
+    display: flex;
+}
+
+.company-name, .company-tag
+{
+    display: inline-block;
+}
+
+.company-name
+{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5CA5A5;
+    margin-right: 15px;
+}
+
+.company-tag
+{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #5CA5A5;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 6px 8px 4px 8px;
+    margin-right: 8px;
+
+    &.featured
+    {
+        background: #2B3939;
+    }
+}
+
+.post-title
+{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    margin: 12px 0px 8px 0px;
+}
+
+.hero-description
+{
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.115385px;
+    color: #7C8F8F;
+    position: relative;
+    padding-right: 35px;
+}
+
+.tag-list
+{
+    text-align:right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 15px;
+
+    li
+    {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: -0.1px;
+        color: #5CA5A5;
+        padding:4px 8px;
+        display: inline-block;
+        background: #EFF6F6;
+        mix-blend-mode: normal;
+        border-radius: 4px;
+
+        &:last-child
+        {
+            margin-right: 0px;
+        }
+
+        &:hover
+        {
+            background: #5CA5A5;
+            color: #fff;
+        }
+    }   
+}
+
+/* Medium size devices (1100px and down)*/
+@media (max-width: 1100px) 
+{
+    //custom grid widths to match design
+    .thumpnail-col
+    {
+        max-width: 14% !important;
+    }
+
+    .info-col-parent
+    {
+        max-width: 86% !important;
+    }
+
+    .info-col, .job-tags-col
+    {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .job-tags-col
+    {
+        margin-top: 20px !important;
+        justify-content: left !important;
+    }
+}
+
+@media (max-width: 950px) /*950px and down*/
+{
+    //custom grid widths to match design
+    .thumpnail-col
+    {
+        max-width: 16% !important;
+    }
+
+    .info-col-parent
+    {
+        max-width: 84% !important;
+    }
+}
+
+
+/* Meduium devices (767px and down)*/
+@media (max-width: 767px) 
+{
+    .thumpnail-col
+    {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .listing-box
+    {
+        padding: 20px !important;
+    }
+
+    .info-col-parent
+    {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .thumpnail
+    {
+        width:60px;
+        height: 60px;
+        border-radius: 50%;
+        background-size: 60px;
+    }
+} 

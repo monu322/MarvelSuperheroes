@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import {useState} from "react";
+
 import './App.css';
 
+import Header from './components/header/header.component';
+import Content from './components/content/content.component';
+import Footer from './components/footer/footer.components';
+
+import { SearchTextContext } from "./contexts/searchContext";
+import {PageContext} from "./contexts/pageContext";
+
 function App() {
+
+  const [searchText, setSearchText] = useState('');
+  const [page, setPage] = useState(1);
+  const [nItems, setnItems] = useState(20);
+
+  const SearchContext = {searchText, setSearchText};
+  const pageContext = {page, setPage, nItems, setnItems};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchTextContext.Provider value={SearchContext}>
+        <PageContext.Provider value={pageContext}>
+          <Header></Header>
+          <Content></Content>
+          <Footer></Footer>
+        </PageContext.Provider>
+      </SearchTextContext.Provider>
     </div>
   );
 }
